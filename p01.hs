@@ -12,4 +12,4 @@ myLast (_:xs) = myLast xs
 
 prop_plusOne xs x = (myLast (xs ++ [x])) == x
 
-prop_reverse xs = (head . reverse) xs == myLast xs
+prop_reverse xs = not (null xs) ==> (head . reverse) xs == myLast xs
